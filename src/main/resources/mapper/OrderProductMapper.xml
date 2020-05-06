@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.food.core.mapper.BaseOrderMapper">
+
+    <resultMap id="BaseResultMap" type="com.food.core.res.vo.OrderListResVo">
+        <collection property="resVos" ofType="com.food.core.res.vo.ProductListResVo" column="order_no" select="findProduct" />
+    </resultMap>
+
+    <select id="findOrder" parameterType="java.lang.String" resultMap="BaseResultMap">
+        SELECT
+        order_no,
+        order_no as orderNo,
+        status,
+        price,
+        create_time as createTime,
+        update_time as updateTime
+        FROM `base_order`
+        where user_id = #{userId}
+    </select>
+
+    <select id="findProduct" parameterType="java.lang.String" resultType="com.food.core.res.vo.ProductListResVo">
+        SELECT
+        op.id,
+        bf.img,
+        bf.`name`,
+        op.num,
+        op.price
+        FROM `order_product` op left join base_food bf on bf.id = op.food_no
+        where order_no = #{order_no}
+    </select>
+
+</mapper>

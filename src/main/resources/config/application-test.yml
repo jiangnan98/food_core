@@ -1,0 +1,104 @@
+server:
+  port: 7777
+  servlet:
+    context-path: /food_core
+system:
+  callBackUrl: 280a3f78.nat123.cc/feeling_core
+  heading: https://jiangnanpoject.oss-cn-beijing.aliyuncs.com/yh.jpg
+  ossFile: E:\project\maven\idea\feeling_core\
+  sex: 1
+  fraction: 100
+  edition: 2.0.0
+  zfb: https://jiangnanpoject.oss-cn-beijing.aliyuncs.com/zfb.jpg
+  tokenTime: 3600000000
+  core: http://121.40.122.92:8082/im_core/
+spring:
+  datasource:
+    url: jdbc:mysql://59.110.116.148:3306/food?characterEncoding=utf8&serverTimezone=GMT&useSSL=true&serverTimezone=GMT%2B8
+    username: food
+    password: xNkxdkjwdz8ECpZ7
+    hikari:
+      minimum-idle: 3
+      maximum-pool-size: 10
+      max-lifetime: 30000
+      connection-test-query: SELECT 1
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 999999999999
+      max-request-size: 999999999999
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    timeout: 1000ms
+    database: 0
+    password:
+    jedis:
+      pool:
+        max-idle: 100
+        max-wait: -1ms
+        min-idle: 2
+logging:
+  config: classpath:config/log4j2-test.yml
+mybatis-plus:
+  mapper-locations: classpath:mapper/**.xml
+  typeAliasesPackage: com.bing.mapper
+  global-config.id-type: 5
+  global-config.field-strategy: 2
+  global-config.db-column-underline: true
+  global-config.refresh-mapper: true
+  global-config.capital-mode: true
+oss:
+  address: http://oss-cn-beijing.aliyuncs.com/
+  url: http://oss.liliubing.cn/
+  accessKey: LTAI0oyc0pRQxso2
+  accessSecret: iitc3uJoSMtMP79aKgSYWMDcJbYIOc
+  bucketName: weinuoqinggan
+  filePath: picture/
+juhe :
+  key: 12ab675a9b398a5331bb00b922724fe2
+  url: http://v.juhe.cn/sms/send
+  DEF_CHATSET: UTF-8
+  DEF_CONN_TIMEOUT: 30000
+  DEF_READ_TIMEOUT: 30000
+  userAgent: "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.66 Safari/537.36"
+tx :
+  sendEmailAccount: 1916172575@qq.com
+  sendEmailPassword: aotecgthptykdeah
+  sendEmailSMTPHost: smtp.qq.com
+wy:
+  from: girlfriendisnull@163.com
+  username: girlfriendisnull@163.com
+  password: qw962453
+  host: smtp.163.com
+#auth
+auth:
+  wxAppId: wxc5ca1b129f8a30c9
+  wxSecret: 10bdc66705328e981332265fc8891bf9
+  qqRedirect: http://www.bhxcw.com/redirect?
+  qqAppId: 101509062
+  qqSecret: ae173563e5dbd2d79564a2538d0fe587
+#wx:
+#  pay:
+#    appId: wx5b69c56ac01ed858
+#    mchId: 1462547202
+#    mchKey: OGL9fvig9y2HrXrQ86tM4jTwyv4ja6G5
+#    subAppId:
+#    subMchId:
+#    keyPath:
+#    notifyUrl: www.liliubing.cn
+wx:
+  pay:
+    appId: wx4f08413bfc6bbe20
+    mchId: 1547000081
+    mchKey: 0IZJa1N6hgd6jjNtjWhYQ09Fq70aoQi2
+    subAppId:
+    subMchId:
+    keyPath:
+    notifyUrl: www.liliubing.cn
+alipay:
+  dev: false #默认false,为true表示使用沙箱环境
+  sign-type: RSA2 #签名算法
+  aliMuchId: 2019072966084080
+  privateKey: MIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDUrbl64iypmwHcYxeTHgKJPeJCcwlR3NICbz08WHgKOkyS6xHqfhhT43XyLDBIJ7se91lUAjW4LXBSgjpau0WuQR8M+xjgauyVgCj1EVjx14jNpOdQD1oWJHtkbuq2BgQp+Co9mjVwBdmBgqS2rpBzmijrNYZotwyWCbiG7trzA5KfBSgzFyKGhr8pi90BXnQ94T+DCDaDWGciocgHrf7HAfws2rlPVxDm/lTNvj2wWkhSQWnR/7L+s5aOS4dEhb6FkZ9OcVrIZx7X4DS88BMiExmIImtHdtfDq2UNW3d5tzuxqk2ngG7Gk4dOyGofAHjOK3fmJ1cJHXFG9I8OV/rrAgMBAAECggEAOU5ySw1EkZLl5neA87BDaK2XGOacXUWOBP/qVSdVeRQKbBARLMk7TudccZu8isTB4+8sT7mktfLwcBsNFEOf2/tKHZpPMrE8/G+jGZ3KBKhaAWdsuKLaWFsOMJq+fbuTRafL4ft6aKv61q3YKi1RWQTx/6bVh8PDDW6jHSChOJeBDUhYUCNRudn43l60/S2wJgjQxO99tMgHzN9OjdrAuhn4QU6hVrN4Ql2mmT/WyMWOIBEyKfTifp5slxNG84Sr+THI5OW93ch/p3iZSSr5hThpJUeX286m6oejSjo/ansDLlTaMQ/bmFOi0E5lLO17oLQzCktfdNROm/s4s+RfgQKBgQDwjkS1SqVM5iWDGFFWHN+ainOK6fniwq79upErlSIoBoDJORhxUHyd225tkGs4QfICk6RMPhPjkZAORQ3tSHRe1RFv3HqUAi79yfS1eVeWAt1rVGGEEosfO5JI/XaTcEupB/In5dnJmP6Xz+Bri8VPikiA75JoU6PrmnivLaJGQQKBgQDiVUXL+/LBytS8Mzck2hsfLIG+MsqWqodkyI3uJj6tnKw/4R4cBZFxnMOSEmv4RhYtoJYJqCwrdaZONFaM2nvu3MNcy8NFxg3zkE0MzNzU2qP7VHZUTeQ3KLcZVrBfsuz9wsFCKDN1StGPMaZCOi6OLNMYJ2L+kMWnPorL3tauKwKBgGEiIU5PAOZHPDhuNlGeQQ/m/fbGuZc942kiz4GYq30b+x7FhkAjLt6S/0kQeqrxveYadcovetp2KYQJkDETA6JTSMIxdfGT3COwS7aHc71oFL5FCUdKMZD//fapGhs4yeRMCBTiNAm6VHs6fjUO8DJI9TPTCPxFYbg93KNnutHBAoGAV9f4yv7ybTyn7JOEJ41vUV4YzRUxg+CTxA4C6Bd35DIWuIRLB10x4gKR9TOpLCcnnHXjRcQ7wHJdJaUyomB6EW8lc/Kxy3bfG1U6UmmAnCxv0LArbPT+SlpHFlKLCdmMGcFo+KBZuIBdbVI70SB7yTqkg49l4J+X1x1zCUVn1RkCgYApTlbwAkoR/RJZtzfeJhxhkQiKN12z73WiScsMps1fCmAe0CgQfGrIEcflcNwtiSVwwSN7/z3mh2sVuGWUqv27L4WQByrhF3rV9WNHdPgcVoeM3igtJ7r1eXxqwWU1YwIhFKvSgrbXoi3GCNYZpNnRbyr9kwEZ9eUMg1EoiNc5qA==
+  publicKey:
